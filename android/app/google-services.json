@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "839403417489",
+    "firebase_url": "https://t-pido.firebaseio.com",
+    "project_id": "t-pido",
+    "storage_bucket": "t-pido.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839403417489:android:855509dc3411f3d4867430",
+        "android_client_info": {
+          "package_name": "com.t_pido.t_pido"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839403417489-d72njlivvrpv931180gt5d91fq3t9oov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMjJWEGR-FcA6TnAzql36_ai6a-HH5kOE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839403417489-d72njlivvrpv931180gt5d91fq3t9oov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
