@@ -47,7 +47,7 @@
         <string>This app needs access to location when in the background.</string>
         <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
         <string>This app needs access to location when open and in the background.</string>
-        <key>LSApplicationQueriesSchemes</key>
+  <!--       <key>LSApplicationQueriesSchemes</key>
         <array>
             <string>com.example.foo</string>
             <string>com.googleusercontent.apps.1234567890-abcdefghijklmnopqrstuvwxyz</string>
@@ -58,6 +58,6 @@
             <string>com.google.gppconsent.2.4.0</string>
             <string>googlechrome</string>
             <string>googlechrome-x-callback</string>
-        </array>
+        </array> -->
     </dict>
 </plist>

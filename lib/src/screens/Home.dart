@@ -307,11 +307,11 @@ class _HomePageState extends State<HomePage> {
                             pressEmpresa.telefono != null ||
                             pressEmpresa.lnombre != null ||
                             pressEmpresa.distrito != null) {
-                          String url = pressEmpresa.linkform +
-                              '?usp=pp_url&${pressEmpresa.lnombre}=${widget.userFirebase.nombre}&${pressEmpresa.direccion}=${widget.userFirebase.direccion}&${pressEmpresa.distrito}=${widget.userFirebase.distrito}&${pressEmpresa.email}=${widget.userFirebase.email}&${pressEmpresa.telefono}=${widget.userFirebase.telefono}&${pressEmpresa.coordenadax}=${widget.userFirebase.coordenadasX}&${pressEmpresa.coordenaday}=${widget.userFirebase.coordenadasY}';
+                          String url = pressEmpresa.linkform /* +
+                              '?usp=pp_url&${pressEmpresa.lnombre}=${widget.userFirebase.nombre}&${pressEmpresa.direccion}=${widget.userFirebase.direccion}&${pressEmpresa.distrito}=${widget.userFirebase.distrito}&${pressEmpresa.email}=${widget.userFirebase.email}&${pressEmpresa.telefono}=${widget.userFirebase.telefono}&${pressEmpresa.coordenadax}=${widget.userFirebase.coordenadasX}&${pressEmpresa.coordenaday}=${widget.userFirebase.coordenadasY}' */;
                           print(url);
                           if (await canLaunch(url)) {
-                            await launch(url);
+                              await launch(url,forceWebView: true,forceSafariVC: true);
                           } else {
                             throw 'Could not launch $url';
                           }
@@ -420,11 +420,11 @@ class _HomePageState extends State<HomePage> {
           pressEmpresa.telefono != null ||
           pressEmpresa.lnombre != null ||
           pressEmpresa.distrito != null) {
-        String url = pressEmpresa.linkform + //&entry.1693718163=XDir&
-            '?usp=pp_url&${pressEmpresa.lnombre}=${widget.userFirebase.nombre}&${pressEmpresa.direccion}=${widget.userFirebase.direccion}&${pressEmpresa.distrito}=${widget.userFirebase.distrito}&${pressEmpresa.email}=${widget.userFirebase.email}&${pressEmpresa.telefono}=${widget.userFirebase.telefono}&${pressEmpresa.coordenadax}=${widget.userFirebase.coordenadasX}&${pressEmpresa.coordenaday}=${widget.userFirebase.coordenadasY}';
+        String url = pressEmpresa.linkform; /* + 
+            '?usp=pp_url&${pressEmpresa.lnombre}=${widget.userFirebase.nombre}&${pressEmpresa.direccion}=${widget.userFirebase.direccion}&${pressEmpresa.distrito}=${widget.userFirebase.distrito}&${pressEmpresa.email}=${widget.userFirebase.email}&${pressEmpresa.telefono}=${widget.userFirebase.telefono}&${pressEmpresa.coordenadax}=${widget.userFirebase.coordenadasX}&${pressEmpresa.coordenaday}=${widget.userFirebase.coordenadasY}'; */
         print(url);
         if (await canLaunch(url)) {
-          await launch(url);
+          await launch(url,forceWebView: true,forceSafariVC: true);
         } else {
           throw 'Could not launch $url';
         }

@@ -45,16 +45,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-flutter_native_splash:
-  image: assets/back.png
-  color: "FFFFFF"
-  android: false
-  ios: true
-
-flutter_icons:
-  ios: true
-  android: false
-  image_path: "assets/ic_launcher.png"
 
 
 
