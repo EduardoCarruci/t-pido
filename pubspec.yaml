@@ -36,13 +36,27 @@ dependencies:
   url_launcher: ^5.5.0
   intl: ^0.16.1
   font_awesome_flutter: ^8.8.1
-  
+  flutter_launcher_icons: ^0.7.5
+  flutter_native_splash: ^0.1.9
 
   
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter_native_splash:
+  image: assets/back.png
+  color: "FFFFFF"
+  android: false
+  ios: true
+
+flutter_icons:
+  ios: true
+  android: false
+  image_path: "assets/ic_launcher.png"
+
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
