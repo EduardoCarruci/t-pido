@@ -6,7 +6,7 @@ Stream<List<Rubros>> getRubros() {
   return Firestore.instance.collection('rubros').snapshots().map(toRubrosList);
 }
 
-// SOLICITAR TODOS LAS EMPRESAS Y AL MISMO TIEMPO PARSEARLOS A UNA LISTA DEl MODELO DE EMPRESAS
+// SOLICITAR TODOS LAS EMPRESAS Y AL MISMO TIEMPO PARSEARLOS A UNA LISTA DEl MODELO DE EMPRESAS DATA
 Stream<List<Empresas>> getEmpresas(String query) {
   return Firestore.instance
       .collection('empresas')
