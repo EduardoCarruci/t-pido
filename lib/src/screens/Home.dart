@@ -287,7 +287,10 @@ class _HomePageState extends State<HomePage> {
                           widget.userFirebase.empresa[index]);
                       print(tasks);
 
-                      Empresas pressEmpresa = new Empresas(
+                  
+                      try {
+
+                            Empresas item = new Empresas(
                         coordenadax: tasks[0].coordenadax,
                         coordenaday: tasks[0].coordenaday,
                         linkform: tasks[0].linkform,
@@ -298,20 +301,30 @@ class _HomePageState extends State<HomePage> {
                         email: tasks[0].email,
                       );
 // validamos si los elementos para el pedido es VALIDO
-                      try {
-                        if (pressEmpresa.email != null ||
-                            pressEmpresa.coordenadax != null ||
-                            pressEmpresa.coordenaday != null ||
-                            pressEmpresa.linkform != null ||
-                            pressEmpresa.direccion != null ||
-                            pressEmpresa.telefono != null ||
-                            pressEmpresa.lnombre != null ||
-                            pressEmpresa.distrito != null) {
-                          String url = pressEmpresa.linkform /* +
-                              '?usp=pp_url&${pressEmpresa.lnombre}=${widget.userFirebase.nombre}&${pressEmpresa.direccion}=${widget.userFirebase.direccion}&${pressEmpresa.distrito}=${widget.userFirebase.distrito}&${pressEmpresa.email}=${widget.userFirebase.email}&${pressEmpresa.telefono}=${widget.userFirebase.telefono}&${pressEmpresa.coordenadax}=${widget.userFirebase.coordenadasX}&${pressEmpresa.coordenaday}=${widget.userFirebase.coordenadasY}' */;
+
+
+                        if (item.email != null ||
+                            item.coordenadax != null ||
+                            item.coordenaday != null ||
+                            item.linkform != null ||
+                            item.direccion != null ||
+                            item.telefono != null ||
+                            item.lnombre != null ||
+                            item.distrito != null) {
+                          print(item.coordenadax);
+                          print(item.coordenaday);
+                          print(item.linkform);
+                          print(item.distrito);
+                          print(item.direccion);
+                          print(item.lnombre);
+                          print(item.email);
+                          //CECILIA ACA
+                          String url = item.linkform /* +
+                              '?usp=pp_url&${item.lnombre}=${widget.userFirebase.nombre}&${item.direccion}=${widget.userFirebase.direccion}&${item.distrito}=${widget.userFirebase.distrito}&${item.email}=${widget.userFirebase.email}&${item.telefono}=${widget.userFirebase.telefono}&${item.coordenadax}=${widget.userFirebase.coordenadasX}&${item.coordenaday}=${widget.userFirebase.coordenadasY}' */;
                           print(url);
                           if (await canLaunch(url)) {
-                              await launch(url,forceWebView: true,forceSafariVC: true);
+                            await launch(url,
+                                forceWebView: true, forceSafariVC: true);
                           } else {
                             throw 'Could not launch $url';
                           }
@@ -396,7 +409,10 @@ class _HomePageState extends State<HomePage> {
 
   void pressButonPedido(Empresas empresa) async {
     print("PEDIDO");
-    Empresas pressEmpresa = new Empresas(
+ 
+    try {
+
+         Empresas item = new Empresas(
       coordenadax: empresa.coordenadax,
       coordenaday: empresa.coordenaday,
       linkform: empresa.linkform,
@@ -407,24 +423,29 @@ class _HomePageState extends State<HomePage> {
       email: empresa.email,
     );
 
-    print(pressEmpresa.direccion);
-    print(pressEmpresa.linkform);
-    print(pressEmpresa.distrito);
-    print(pressEmpresa.lnombre);
-    try {
-      if (pressEmpresa.email != null ||
-          pressEmpresa.coordenadax != null ||
-          pressEmpresa.coordenaday != null ||
-          pressEmpresa.linkform != null ||
-          pressEmpresa.direccion != null ||
-          pressEmpresa.telefono != null ||
-          pressEmpresa.lnombre != null ||
-          pressEmpresa.distrito != null) {
-        String url = pressEmpresa.linkform; /* + 
-            '?usp=pp_url&${pressEmpresa.lnombre}=${widget.userFirebase.nombre}&${pressEmpresa.direccion}=${widget.userFirebase.direccion}&${pressEmpresa.distrito}=${widget.userFirebase.distrito}&${pressEmpresa.email}=${widget.userFirebase.email}&${pressEmpresa.telefono}=${widget.userFirebase.telefono}&${pressEmpresa.coordenadax}=${widget.userFirebase.coordenadasX}&${pressEmpresa.coordenaday}=${widget.userFirebase.coordenadasY}'; */
+    print(item.coordenadax);
+    print(item.coordenaday);
+    print(item.linkform);
+    print(item.distrito);
+    print(item.direccion);
+    print(item.lnombre);
+    print(item.email);
+
+
+      if (item.email != null ||
+          item.coordenadax != null ||
+          item.coordenaday != null ||
+          item.linkform != null ||
+          item.direccion != null ||
+          item.telefono != null ||
+          item.lnombre != null ||
+          item.distrito != null) {
+            //CECILIA ACA
+        String url = item.linkform /* +
+            '?usp=pp_url&${item.lnombre}=${widget.userFirebase.nombre}&${item.direccion}=${widget.userFirebase.direccion}&${item.distrito}=${widget.userFirebase.distrito}&${item.email}=${widget.userFirebase.email}&${item.telefono}=${widget.userFirebase.telefono}&${item.coordenadax}=${widget.userFirebase.coordenadasX}&${item.coordenaday}=${widget.userFirebase.coordenadasY}' */;
         print(url);
         if (await canLaunch(url)) {
-          await launch(url,forceWebView: true,forceSafariVC: true);
+          await launch(url, forceWebView: true, forceSafariVC: true);
         } else {
           throw 'Could not launch $url';
         }
